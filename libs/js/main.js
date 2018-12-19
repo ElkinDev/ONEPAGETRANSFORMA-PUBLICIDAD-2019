@@ -20,7 +20,8 @@ $(document).scroll(function () {
     $("#site-footer").hide();
 
   }
-})
+});
+
 $(document).ready(function () {
   // scrollmagic
   $("#site-footer").hide();
@@ -60,7 +61,33 @@ $(document).ready(function () {
 
 
 
+  createSticky(jQuery("#sticky-wrap"));
 
+  function createSticky(sticky) {
+    if (typeof sticky != "undefined") {
+
+      var pos = $("#about").offset().top-100,
+        win = jQuery(window),
+        home= $("#home").offset().top;
+
+      win.on("scroll", function () {
+
+        if (win.scrollTop() > pos) {
+          sticky.addClass("stickyhead");
+        } else {
+          sticky.removeClass("stickyhead");
+        }
+
+        if(win.scrollTop()> home && win.scrollTop()< pos ){
+          sticky.addClass("stickyPosition");
+
+        }else{
+          sticky.removeClass("stickyPosition");
+
+        }
+      });
+    }
+  }
 
 
 });
@@ -68,43 +95,12 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
-  // Custom 
-  var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
-    var stickyHeight = sticky.outerHeight();
-    var stickyTop = $(".two-section").offset().top - 100;
-    if (scrollElement.scrollTop() >= stickyTop) {
-      stickyWrapper.height(stickyHeight);
-      sticky.addClass("is-sticky");
-    }
-    else {
-      sticky.removeClass("is-sticky");
-      stickyWrapper.height('auto');
-    }
-  };
-
-  // Find all data-toggle="sticky-onscroll" elements
-  $('[data-toggle="sticky-onscroll"]').each(function () {
-    var sticky = $(this);
-    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-    sticky.before(stickyWrapper);
-    sticky.addClass('sticky');
-
-    // Scroll & resize events
-    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
-      stickyToggle(sticky, stickyWrapper, $(this));
-    });
-
-    // On page load
-    stickyToggle(sticky, stickyWrapper, $(window));
-  });
-});
 
 $('#navbar10 a').click(function (e) {
   e.preventDefault();		//evitar el eventos del enlace normal
   var strAncla = $(this).attr('href'); //id del ancla
   $('body,html').stop(true, true).animate({
-    scrollTop: $(strAncla).offset().top - ($(".navbar").height()-10)
+    scrollTop: $(strAncla).offset().top - ($(".navbar").height() + 10)
   }, 1000);
 
 });
