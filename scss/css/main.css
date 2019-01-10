@@ -1,0 +1,143 @@
+body{
+    padding:0;
+    margin:0;
+  }
+  
+  figure{
+    margin: 0;
+    padding:0;
+  }
+  
+
+  .wrapper{
+    max-width: 100%;
+    margin: 0px 0px;
+    min-height: 100%;
+    min-height: 100vh;    
+    position: relative;
+    z-index: 1;
+
+	-webkit-box-shadow: #000 0 7px 35px 0;
+	-moz-box-shadow: #000 0 7px 35px 0;
+	box-shadow: #000 0 7px 35px 0;
+
+  }
+  
+  .image-wrapper {
+    background: url("https://cdn.dribbble.com/users/91700/screenshots/3038974/loader.gif")
+      center center no-repeat;
+    width: 100%;
+    background-size:cover;
+    position: relative;
+    transform: scale(0.657) rotateX(5deg);
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+    
+  }
+  
+  .navbar{
+    color:#181d23 !important;
+
+    -webkit-transition:1s all ease;
+    -moz-transition:1s all ease;
+    transition:1s all ease;
+  }
+  .navbar .nav-item a{
+      color:#fff;
+      margin-top:30px;
+      padding: 10px;
+  }
+
+  #sticky-wrap {
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    -webkit-transition:1s all ease;
+    -moz-transition:1s all ease;
+    transition:1s all ease;
+    z-index: 99;
+
+  }
+  .stickyPosition{
+    top:-115px !important;
+
+  }
+  .stickyhead {
+    position: fixed !important;
+    top:0 !important;
+    width: 100%;
+    background: rgba(24,29,35,0.7) !important;
+    color:#fff;
+    padding: 3px;
+    box-shadow:0 0 10px rgba(24,29,35,0.3) !important;
+    z-index: 99;
+
+  }
+
+  .abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+  .zap{
+    transform: scale(1);
+    transform: perspective(0) rotateX(0);
+  }
+  
+  .ratio_16-9 {
+    padding-bottom: calc(56.25% + 0px);
+    height: 100vh;
+  }
+  .b-lazy {
+    max-width: 100%;
+    
+  }
+  
+  /* transition */
+  .b-lazy {
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    max-width: 100%;
+    opacity: 0.2;
+  }
+  .b-lazy.b-loaded {
+    opacity: 1;
+  }
+  
+  #site-footer {
+    padding: 25px 0;
+	font-size: 85%;
+  background-color: #ffffff;
+  color: #181d23;
+	position: fixed;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+  min-height: 20vw;
+  background-size: cover;
+  background-position: center;
+  background-image: url('http://dummyimage.com/1500x1500/2A2A2A/FFF.png?text=Footer+Area+(Resize+Me)');
+  }
+
+
+
+
+  /* SECTION HOME*/
+  #video-background {
+    /*  making the video fullscreen  */
+      position: fixed;
+      right: 0; 
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      width: auto; 
+      height: auto;
+      z-index: -100;
+    }
+
+  /* END SECTION HOME*/
