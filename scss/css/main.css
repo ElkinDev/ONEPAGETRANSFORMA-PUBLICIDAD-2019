@@ -1,27 +1,160 @@
+@font-face {
+  font-family: 'Monserrat-Regular';
+  src: url('../../assets/fonts/MontserratAlternates-Regular.eot');
+  src: url('../../assets/fonts/MontserratAlternates-Regular#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/MontserratAlternates-Regular.woff') format('woff'),
+  url('../../assets/fonts/MontserratAlternates-Regular.ttf') format('truetype'),
+  url('../../assets/fonts/MontserratAlternates-Regular.svg') format('svg');
+
+}
+
+@font-face {
+    font-family: 'Monserrat-bold';
+    src: url('../../assets/fonts/Montserrat-Bold.eot');
+    src: url('../../assets/fonts/Montserrat-Bold#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Montserrat-Bold.woff') format('woff'),
+    url('../../assets/fonts/Montserrat-Bold.ttf') format('truetype'),
+    url('../../assets/fonts/Montserrat-Bold.svg') format('svg');
+  }
+
+@font-face {
+  font-family: 'Monserrat-bold-italic';
+  src: url('../../assets/fonts/MontserratAlternates-SemiBoldItalic.eot');
+  src: url('../../assets/fonts/MontserratAlternates-SemiBoldItalic#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/MontserratAlternates-SemiBoldItalic.woff') format('woff'),
+  url('../../assets/fonts/MontserratAlternates-SemiBoldItalic.ttf') format('truetype'),
+  url('../../assets/fonts/MontserratAlternates-SemiBoldItalic.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Monserrat-Medium';
+  src: url('../../assets/fonts/MontserratAlternates-Medium.eot');
+  src: url('../../assets/fonts/MontserratAlternates-Medium#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/MontserratAlternates-Medium.woff') format('woff'),
+  url('../../assets/fonts/MontserratAlternates-Medium.ttf') format('truetype'),
+  url('../../assets/fonts/MontserratAlternates-Medium.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Monserrat-Light-Italic';
+  src: url('../../assets/fonts/MontserratAlternates-LightItalic.eot');
+  src: url('../../assets/fonts/MontserratAlternates-LightItalic#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/MontserratAlternates-LightItalic.woff') format('woff'),
+  url('../../assets/fonts/MontserratAlternates-LightItalic.ttf') format('truetype'),
+  url('../../assets/fonts/MontserratAlternates-LightItalic.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Monserrat-Italic';
+  src: url('../../assets/fonts/MontserratAlternates-Italic.eot');
+  src: url('../../assets/fonts/MontserratAlternates-Italic#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/MontserratAlternates-Italic.woff') format('woff'),
+  url('../../assets/fonts/MontserratAlternates-Italic.ttf') format('truetype'),
+  url('../../assets/fonts/MontserratAlternates-Italic.svg') format('svg');
+}
+
+
 body{
     padding:0;
     margin:0;
-  }
-  
-  figure{
+    font-family:'Monserrat-regular';
+}
+
+.c-white{
+  color:#fff !important;
+}
+.c-black{
+  color: #181d23 !important;
+}
+.bg-white{
+  background-color:#fff !important;
+}
+.bg-black{
+  background-color:#181d23 !important;
+}
+.bg-red{
+  background-color:#B00000 !important;
+}
+.bg-gray{
+  background-color:rgb(224, 224, 224) !important;
+}
+
+.hover-white{
+  background-color: rgba(255, 255, 255,.8);
+
+}
+.hover-gray{
+  background-color: rgba(255, 255, 255, .8);
+
+}
+.hover-red{
+  background-color:rgba(178, 0, 0 ,.7);
+
+}
+.hover-black{
+  background-color: rgba(24, 29, 35,.7);
+
+}
+
+ h1,h2,h3,h4,h5,h6{
+  font-family:'Monserrat-bold' !important;
+} 
+.navbar-collapse{
+  font-family: 'Monserrat-Medium' !important;
+}
+.subtitle{
+  font-family:'Monserrat-bold-italic' !important;
+}
+.subtitle-Light{
+  font-family:'Monserrat-Light-Italic' !important;
+  font-weight:580;
+
+}
+
+.subtitle-italic{
+  font-family:'Monserrat-Italic' !important;
+}
+.subtitle-medium{
+  font-family:'Monserrat-Medium' !important;
+}
+
+figure{
     margin: 0;
     padding:0;
-  }
-  
+}
 
-  .wrapper{
+.out{
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  /*whatever width you want*/
+}
+
+.wrapper{
     max-width: 100%;
     margin: 0px 0px;
     min-height: 100%;
     min-height: 100vh;    
     position: relative;
     z-index: 1;
+	  -webkit-box-shadow: #000 0 7px 35px 0;
+	  -moz-box-shadow: #000 0 7px 35px 0;
+	  box-shadow: #000 0 7px 35px 0;
 
-	-webkit-box-shadow: #000 0 7px 35px 0;
-	-moz-box-shadow: #000 0 7px 35px 0;
-	box-shadow: #000 0 7px 35px 0;
-
-  }
+}
   
   .image-wrapper {
     background: url("https://cdn.dribbble.com/users/91700/screenshots/3038974/loader.gif")
@@ -35,9 +168,17 @@ body{
     transition-timing-function: ease-out;
     
   }
+  .image-wrapper-1 {
+  
+    transform: scale(0.657) rotateX(5deg);
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+    
+  }
   
   .navbar{
-    color:#181d23 !important;
+    color:#fff !important;
 
     -webkit-transition:1s all ease;
     -moz-transition:1s all ease;
@@ -87,8 +228,15 @@ body{
   }
   
   .ratio_16-9 {
-    padding-bottom: calc(56.25% + 0px);
+    /* padding-bottom: calc(56.25% + 0px); */
     height: 100vh;
+  }
+  .ratio_16-9-1 {
+    /* padding-bottom: calc(56.25% + 0px); */
+    height: auto;
+  }
+  .pd-section{
+    padding:100px 0 50px 0;
   }
   .b-lazy {
     max-width: 100%;
@@ -138,6 +286,413 @@ body{
       width: auto; 
       height: auto;
       z-index: -100;
-    }
+  }
+
+  .container-home{
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+ 
+
+  .button-scroll-about{
+    position: absolute;
+    bottom:12%;
+    left:50%;
+    transform: translate(10px, -50%); /* This is a shorthand of*/
+    font-size:45px;
+    cursor: pointer;
+    text-decoration: none
+  }
+  .button-scroll-about:hover{
+    text-decoration: none;
+  }
+  
 
   /* END SECTION HOME*/
+
+  /* ////////////////////////// */
+
+  /* SECTION-ABOUT */
+    .service-box{
+      height:350px;
+      min-height:350px;
+      display: table;
+    }
+  
+    .img-service-one{
+      background:url(../../assets/others-images/porto-1.jpg);
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: cover !important;
+      height: 50px;
+    }
+    .img-service-two{
+      background:url(../../assets/others-images/porto-2.jpg);
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: cover !important;
+      height: 50px;
+    }
+    .img-service-three{
+      background:url(../../assets/others-images/Porto-3.jpg);
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: cover !important;
+      height: 50px;
+    }
+    .img-service-four{
+      background:url(../../assets/others-images/porto-4.jpg);
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: cover !important;
+      height: 50px;
+    }
+
+
+  
+
+
+.social-nav{
+  padding: 0;
+  list-style: none;
+  margin:  auto;
+ 
+}
+
+.social-nav li{
+  display: inline-block;
+}
+
+.social-nav li a {
+  display: inline-block;
+  float: left;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 48px;
+  background: #fff;
+  position: relative;
+
+}
+
+
+
+.model-2 a{
+
+    overflow: hidden;
+    font-size: 26px;
+    border-radius:4px;
+    margin:0 5px;
+
+}
+
+  
+.model-2 a:hover{
+    background: #fff !important;
+    text-shadow:#eee !important;
+ }
+  
+  .twitter{
+    background:#00ACED !important;
+    text-shadow: #00ACED !important;
+  }
+  .twitter:hover{
+    color:#00ACED;
+  }
+  .facebook{
+    background:#3B579D !important;
+    text-shadow: #3B579D !important;
+  }
+  
+  .facebook:hover{
+    color: #3B579D !important;
+  }
+
+  .google-plus{
+    background:#DD4A3A !important;
+    text-shadow: #DD4A3A !important;
+  }
+  .google-plus:hover{
+    color: #DD4A3A !important;
+  }
+  .linkedin{
+    background:#007BB6 !important;
+    text-shadow:#007BB6 !important;
+  }
+  .linkedin:hover{
+    color:#007BB6 !important;
+  }
+
+
+
+  /* ////////////////////////// */
+
+  /* SECTION-PROJECTS */
+  
+#portfolio {  
+    margin: 1rem 0;
+    -webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    -webkit-column-width: 33.33333333333333%;
+    -moz-column-width: 33.33333333333333%;
+    column-width: 33.33333333333333%;
+}
+.tile { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+
+}
+.tile:hover { 
+
+}
+
+.scale-anm {
+  transform: scale(1);
+}
+
+
+
+.tile img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  
+}
+
+.btn {
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+  border-color: var(--darken-2);
+  box-shadow: 0 0 0 3px var(--darken-3);
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 30px auto 0;
+}
+.link a {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 17px;
+  color: #1f1f1f;
+  text-decoration: none;
+}
+.link a:last-child {
+  margin-right: 0;
+}
+.link a:hover {
+  color: #7a306c;
+}
+.link a i {
+  color: #7a306c;
+  margin-right: 5px;
+}
+.content-block {
+  margin-top: 50px;
+}
+.content-block h2 {
+  margin-bottom: 30px;
+}
+.content-block__effect {
+  margin-bottom: 50px;
+}
+/* effects styles !!!YOU NEED THEM */
+/* don't forget to add your own colors and parameters */
+.portfolio-effect {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-item img {
+}
+.portfolio-item__info {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding:10%;
+}
+.portfolio-item__header {
+  position: relative;
+  margin: 0 0 20px 0;
+  padding: 15px 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.portfolio-item__header:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  width: 100%;
+  content: '';
+  background-color: #8d909b;
+}
+.portfolio-item__links {
+  display: flex;
+  text-decoration:none;
+}
+.portfolio-item__link-block {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+.portfolio-item__link-block:last-child {
+  margin-right: 0;
+}
+.portfolio-item__link {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #101010;
+  text-decoration: none !important;
+  border: 1px solid #101010;
+  border-radius: 50%;
+}
+.portfolio-item__link:hover {
+  color: #fff;
+  background-color: #101010;
+}
+/* EFFECT #1 STYLES */
+.portfolio-item--eff1 .portfolio-item__info {
+  transform: scale(1.02);
+  opacity: 0;
+}
+.portfolio-item--eff1 .portfolio-item__header {
+  top: -10px;
+  opacity: 0;
+}
+.portfolio-item--eff1 .portfolio-item__header:after {
+  transform: scaleX(0);
+}
+.portfolio-item--eff1 .portfolio-item__link-block {
+  top: 20px;
+  opacity: 0;
+}
+.portfolio-item--eff1:hover .portfolio-item__info {
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+  opacity: 1;
+}
+.portfolio-item--eff1:hover .portfolio-item__header {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0.45s;
+  top: 0;
+  opacity: 1;
+}
+.portfolio-item--eff1:hover .portfolio-item__header:after {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.63, 0.01, 0, 1.39);
+  transition-delay: 0.65s;
+  transform: scaleX(1);
+}
+.portfolio-item--eff1:hover .portfolio-item__link-block {
+  top: 0;
+  opacity: 1;
+}
+.portfolio-item--eff1:hover .portfolio-item__link-block:first-child {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0.85s;
+}
+.portfolio-item--eff1:hover .portfolio-item__link-block:nth-child(2) {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0.95s;
+}
+¿
+  /* END SECTION-PROJECTS */
+
+  
+  
+  /* ////////////////////////// */
+
+  /* SECTION-ABOUT */
+  
+  /* END SECTION-ABOUT */
+
+
+
+
+  /* ////////////////////////// */
+
+  /* SECTION-ABOUT */
+  
+  /* END SECTION-ABOUT */
+
+
+
+
+  /* ////////////////////////// */
+
+  /* SECTION-ABOUT */
+  
+  /* END SECTION-ABOUT */
+
+
+
+
+  /* ////////////////////////// */
+
+  /* SECTION-ABOUT */
+  
+  /* END SECTION-ABOUT */
