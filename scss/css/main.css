@@ -587,7 +587,7 @@ figure{
 }
 .portfolio-item__link {
   transition-property: all;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
   transition-timing-function: linear;
   transition-delay: 0s;
   display: flex;
