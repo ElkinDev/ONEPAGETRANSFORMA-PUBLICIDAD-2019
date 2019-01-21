@@ -258,7 +258,7 @@ figure{
   
   #site-footer {
     padding: 25px 0;
-	font-size: 85%;
+	/* font-size: 85%; */
   background-color: #ffffff;
   color: #181d23;
 	position: fixed;
@@ -266,12 +266,17 @@ figure{
 	left: 0;
 	right: 0;
 	bottom: 0;
-  min-height: 20vw;
+  min-height: 15vw;
   background-size: cover;
   background-position: center;
-  background-image: url('http://dummyimage.com/1500x1500/2A2A2A/FFF.png?text=Footer+Area+(Resize+Me)');
-  }
+  /* background-image: url('http://dummyimage.com/1500x1500/2A2A2A/FFF.png?text=Footer+Area+(Resize+Me)'); */
+  /* background-color:#fff; */
+  background-color:rgb(224, 224, 224) !important;
 
+  }
+#site-footer h5 span{
+  font-family:'Monserrat-Light-Italic' !important;
+}
 
 
 
@@ -666,33 +671,266 @@ figure{
   
   /* ////////////////////////// */
 
-  /* SECTION-ABOUT */
+  /* CLIENTS SECTION */
+  .col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel .item {
+	/* font-size: 14px; */
+    text-align: center;
+	overflow: hidden;
+    /* min-height: 290px; */
+}
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview h5 {
+	text-transform: uppercase;
+  font-weight:600;
+  font-family:'Monserrat-Medium';
+  margin:0;
+  padding:0;
+}
+.carousel .carousel-control {
+	/* width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+  background: none; */
+  display: none
+}
+.carousel-control i {
+   display: none;
+}
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 12px !important; 
+  height: 0px !important;
+  min-height: 0 !important;
+	/* margin: 1px 3px; */
+	border-radius: 50%;
+}
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li.active {	
+	background: #555;		
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+
   
-  /* END SECTION-ABOUT */
+  /* CLIENTS SECTION */
 
 
 
 
   /* ////////////////////////// */
 
-  /* SECTION-ABOUT */
+  /* CONTACT-SECTION */
   
-  /* END SECTION-ABOUT */
+.contact-section{
+  height:100%;
+}
+.div-contact{
+  min-height:550px;
+}
+.div-form{
+  display:table;
+  width: 100%;
+}
+.inner-1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  /*whatever width you want*/
+}
+.contact-about{
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.contact-about p{
+  text-align: center;
+  margin:0 auto;
+  overflow: hidden;
+  max-width: 85%;
+}
+.contact-info p{
+ padding-top:10px;
+ /* margin-bottom:20px; */
+}
+.contact-about h1,h2,h3,h4,h5{
+  font-family: 'Monserrat-bold-italic';
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: #181d23;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder, select:focus::-webkit-input-placeholder {
+  color: #181d23;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+  color: #181d23;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder, select:focus::-moz-placeholder {
+  color: #181d23;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+  color: #181d23;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder, select:focus::placeholder {
+  color: #181d23;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder, select::-ms-placeholder {
+  color: #181d23;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder,select:focus::-ms-placeholder {
+  color: #181d23;
+}
+
+/* on hover placeholder */
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder, select:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder, select:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder, select:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder, select:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder, select:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder, select:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder, select:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder, select:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
 
 
+#form {
+  position: relative;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  text-transform: uppercase;
+}
 
+input,select {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  width: 100%;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  background: transparent;
+  outline: none;
+  color: #181d23;
+  border: solid 2px #181d23;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
 
-  /* ////////////////////////// */
+}
 
-  /* SECTION-ABOUT */
+input:hover, select:hover {
+  background: #181d23;
+  color: #e2dedb;
+}
+
+textarea {
+  text-transform: uppercase;
+
+  width: 100%;
+  max-width: 100%;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  background: transparent;
+  outline: none;
+  color: #181d23;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  border: solid 2px #181d23;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #181d23;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 100%;
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  color: #181d23;
+  outline: none;
+  cursor: pointer;
+  border: solid 2px #181d23;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
   
-  /* END SECTION-ABOUT */
+  /* END CONTACT-ABOUT */
 
-
-
-
-  /* ////////////////////////// */
-
-  /* SECTION-ABOUT */
-  
-  /* END SECTION-ABOUT */
