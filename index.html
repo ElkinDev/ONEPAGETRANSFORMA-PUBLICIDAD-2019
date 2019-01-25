@@ -25,7 +25,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbar10">
-                <ul class="navbar-nav nav-fill w-100">
+                <ul class="navbar-nav nav-fill w-100" id="top-menu">
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Inicio</a>
                     </li>
@@ -229,7 +229,7 @@
                         <div style="clear:both;"></div>
                         <div id="portfolio">
                             <div class="tile scale-anm web all portfolio-item portfolio-effect__item portfolio-item--eff1"
-                                data-toggle="modal" data-target="#fsModal"  onclick="openProjectDetail('14')" >
+                                data-toggle="modal" data-target="#fsModal" onclick="openProjectDetail('14')">
                                 <img class="portfolio-item__image" src="assets/others-images/Porto-3.jpg" alt="" />
 
                                 <div class="portfolio-item__info hover-gray">
@@ -242,7 +242,8 @@
                                 </div>
                             </div>
 
-                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1" data-toggle="modal" data-target="#fsModal">
+                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1"
+                                data-toggle="modal" data-target="#fsModal">
                                 <img src="assets/others-images/porto-1.jpg" alt="" />
                                 <div class="portfolio-item__info hover-gray">
 
@@ -252,7 +253,8 @@
 
                                 </div>
                             </div>
-                            <div class="tile scale-anm seo all portfolio-effect__item portfolio-item--eff1" data-toggle="modal" data-target="#fsModal">
+                            <div class="tile scale-anm seo all portfolio-effect__item portfolio-item--eff1" data-toggle="modal"
+                                data-target="#fsModal">
                                 <img src="assets/others-images/porto-1.jpg" alt="" />
                                 <div class="portfolio-item__info hover-gray">
 
@@ -261,7 +263,8 @@
 
                                 </div>
                             </div>
-                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1" data-toggle="modal" data-target="#fsModal">
+                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1"
+                                data-toggle="modal" data-target="#fsModal">
                                 <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg"
                                     alt="" />
                                 <div class="portfolio-item__info hover-gray">
@@ -273,7 +276,8 @@
 
                                 </div>
                             </div>
-                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1" data-toggle="modal" data-target="#fsModal">
+                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1"
+                                data-toggle="modal" data-target="#fsModal">
                                 <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg"
                                     alt="" />
                                 <div class="portfolio-item__info hover-gray">
@@ -283,7 +287,8 @@
 
                                 </div>
                             </div>
-                            <div class="tile scale-anm web all portfolio-effect__item portfolio-item--eff1" data-toggle="modal" data-target="#fsModal">
+                            <div class="tile scale-anm web all portfolio-effect__item portfolio-item--eff1" data-toggle="modal"
+                                data-target="#fsModal">
                                 <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290"
                                     alt="" />
                                 <div class="portfolio-item__info hover-gray">
@@ -293,7 +298,8 @@
 
                                 </div>
                             </div>
-                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1" data-toggle="modal" data-target="#fsModal">
+                            <div class="tile scale-anm MarketingDigital all portfolio-effect__item portfolio-item--eff1"
+                                data-toggle="modal" data-target="#fsModal">
                                 <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290"
                                     alt="" />
                                 <div class="portfolio-item__info hover-gray">
@@ -368,7 +374,7 @@
                             </ol>    -->
                             <!-- Wrapper for carousel items -->
                             <div class="carousel-inner">
-                                <div class="item carousel-item active" >
+                                <div class="item carousel-item active">
                                     <div class="img-box"><img src="/examples/images/clients/1.jpg" alt=""></div>
                                     <p class="testimonial">"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                         Nam
@@ -420,7 +426,7 @@
         <figure class="image-wrapper-1 ratio_16-9-1" id="contact" style="background:#181d23;">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 bg-black c-white contact-about p-5 text-center div-contact" >
+                    <div class="col-md-6 bg-black c-white contact-about p-5 text-center div-contact">
                         <h3>Tenemos un café<br> preparado para tí</h3>
                         <p class="pt-3 pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                             posuere at tellus a
@@ -509,20 +515,15 @@
 
                 <!-- body -->
                 <div class="modal-body">
-                    <div class="container">
+                    <div class="container" id="container-info-detail">
                         <div class="row">
-                            <div class="col-md-7">
-                                <img src="assets/others-images/porto-5.jpg" class="img-fluid img-detail-project" alt="">
-                                <img src="assets/others-images/porto-6.jpg" class="img-fluid img-detail-project" alt="">
-                                <img src="assets/others-images/porto-7.jpg" class="img-fluid img-detail-project" alt="">
-
-
+                            <div class="col-md-7" id="images-projects">
                             </div>
                             <div class="col-md-5">
-                                <h3 class="title-detail-project">Sitio Web Colegio Refous</h3>
-                                <p class="subtitle-detail-project">Desarrollo Web / Marketing Digital / SEO</p>
+                                <h3 class="title-detail-project" id="title-detail-project"></h3>
+                                <p class="subtitle-detail-project" id="subtitle-detail-project"></p>
 
-                                <p class="subtitle-detail-social-share">Cuentales a todos</p>
+                                <p class="subtitle-detail-social-share"></p>
                                 <ul class="social-nav-1 model-2 mb-3">
                                     <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li>
                                     <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
@@ -530,35 +531,44 @@
                                     <li><a class="linkedin" href=""><i class="fa fa-linkedin"></i></a></li>
 
                                 </ul>
-
-                                <p class="content-detail-project">Liquor ipsum dolor sit amet bearded lady, grog
-                                    murphy's bourbon lancer. Kamikaze vodka gimlet;
-                                    old rip van winkle, lemon drop martell salty dog tom collins smoky martini ben
-                                    nevis man o'war.
-                                    Strathmill grand marnier sea breeze b & b mickey slim. Cactus jack aberlour seven
-                                    and seven,
-                                    beefeater early times beefeater kalimotxo royal arrival jack rose. Cutty sark scots
-                                    whisky b &
-                                    b harper's finlandia agent orange pink lady three wise men gin fizz murphy's.
-                                    Chartreuse french
-                                    75 brandy daisy widow's cork 7 crown ketel one captain morgan fleischmann's,
-                                    hayride, edradour
-                                    godfather. Long island iced tea choking hazard black bison, greyhound harvey
-                                    wallbanger,
-                                    "gibbon kir royale salty dog tonic and tequila."</p>
+                                <p class="content-detail-project" id="content-detail-project"></p>
 
                             </div>
                         </div>
                     </div>
+                    <div class="loading-panel" id="loading-panel">
 
+                        <div class="middle">
+                            <div class="inner">
+                                <div class="spinner">
+                                    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="length" fill="none" stroke-width="8" stroke-linecap="round" cx="33"
+                                            cy="33" r="28"></circle>
+                                    </svg>
+                                    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                        <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                                    </svg>
+                                    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                        <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                                    </svg>
+                                    <svg viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                        <circle fill="none" stroke-width="8" stroke-linecap="round" cx="33" cy="33" r="28"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
                 <!-- body -->
 
                 <!-- footer -->
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal">
-                        cerrar
-                    </button>
+                    <div style="cursor: pointer;" data-dismiss="modal">
+                            <i class="ti-close c-red"></i>
+                        
+                    </div>
                 </div>
                 <!-- footer -->
 

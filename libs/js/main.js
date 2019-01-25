@@ -10,6 +10,18 @@ $(function () {
 });
 
 
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("nav-link"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+
 $(document).scroll(function () {
   var positionContact = $("#contact").position();
 
@@ -20,10 +32,36 @@ $(document).scroll(function () {
     $("#site-footer").hide();
 
   }
+
+
+
+  // Get container scroll position
+  var fromTop = $(this).scrollTop() + topMenuHeight;
+
+  // Get id of current scroll item
+  var cur = scrollItems.map(function () {
+    if ($(this).offset().top < fromTop)
+      return this;
+  });
+  // Get the id of the current element
+  cur = cur[cur.length - 1];
+  var id = cur && cur.length ? cur[0].id : "";
+
+  if (lastId !== id) {
+    lastId = id;
+    // Set/remove active class
+    menuItems
+      .parent().removeClass("active")
+      .end().filter("[href='#" + id + "']").parent().addClass("active");
+  }
+
+
+
 });
 
 $(document).ready(function () {
   // scrollmagic
+  $('#container-info-detail').css('display', 'none')
   $("#site-footer").hide();
   var controller = new ScrollMagic.Controller();
   $(".image-wrapper,.image-wrapper-1").each(function () {
@@ -116,8 +154,38 @@ $(function () {
 });
 
 
-function openProjectDetail(idProject){
-  console.log('quierooo ver la data',idProject)
-  // window.history.pushState('', "proyecto/queeeee", "index.html");
+function openProjectDetail(idProject) {
+  var data = {
+    images: ['assets/others-images/porto-5.jpg', 'assets/others-images/porto-6.jpg', 'assets/others-images/porto-7.jpg'],
+    title: 'Sitio Web Colegio Refous',
+    category: 'Desarrollo Web / Marketing Digital / SEO',
+    content: "Liquor ipsum dolor sit amet bearded lady, grog murphy s bourbon lancer. Kamikaze vodka gimlet; old rip van winkle, lemon drop martell salty dog tom collins smoky martini ben nevis man o war.Strathmill grand marnier sea breeze b & b mickey slim. Cactus jack aberlour seven and seven, beefeater early times beefeater kalimotxo royal arrival jack rose. Cutty sark scots whisky b & b harper's finlandia agent orange pink lady three wise men gin fizz murphy's. Chartreuse french 75 brandy daisy widow's cork 7 crown ketel one captain morgan fleischmann's, hayride, edradour godfather. Long island iced tea choking hazard black bison, greyhound harvey wallbanger, gibbon kir royale salty dog tonic and tequila."
+  }
+  data.images.forEach(function (entry) {
+    $("#images-projects").append('<img src="' + entry + '" class="img-fluid img-detail-project">')
+  });
+  $('#title-detail-project').text(data.title)
+  $('#subtitle-detail-project').text(data.category)
+  $('#content-detail-project').text(data.content)
+  console.log(data.content);
+
+  setTimeout(() => {
+    $('#loading-panel').css('display', 'none')
+
+    $('#container-info-detail').css('display', 'block')
+
+  }, 1000);
+
 
 }
+
+$('#fsModal').on('hidden.bs.modal', function () {
+  $("#images-projects").html(null)
+  $('#title-detail-project').text(null)
+  $('#subtitle-detail-project').text(null)
+  $('#content-detail-project').text(null)
+  $('#container-info-detail').css('display', 'none')
+  $('#loading-panel').css('display', 'table')
+
+
+})
